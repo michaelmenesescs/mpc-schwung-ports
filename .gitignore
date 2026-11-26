@@ -1,0 +1,4 @@
+# Where the build happens
+.build/
+dist/
+ports/*/build/

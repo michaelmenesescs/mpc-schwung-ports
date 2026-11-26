@@ -1,0 +1,26 @@
+{
+  "name": "Bus Driver",
+  "vendor": "legsmechanical",
+  "uid": "BusD",
+  "version": 300,
+  "so": "busdriver.so",
+  "module": "module.json",
+  "adapter": "schwungfx",
+  "effect": true,
+  "release_version": "0.3.0",
+  "license": "MIT",
+  "about": "Drum-bus glue: one-knob compression, three drive characters, damping and a tuned sub generator.",
+  "build": {
+    "root": "../..",
+    "sources": [
+      ".build/upstream/schwung-busdriver/src/busdriver_module.cpp"
+    ],
+    "cflags": [
+      "-I.build/upstream/schwung-busdriver/src",
+      "-std=gnu++17"
+    ],
+    "libs": [
+      "-lm"
+    ]
+  }
+}

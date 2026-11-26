@@ -1,0 +1,26 @@
+{
+  "name": "Junologue Chorus",
+  "vendor": "Peter Allwin",
+  "uid": "Juno",
+  "version": 120,
+  "so": "junologue-chorus.so",
+  "module": "module.json",
+  "adapter": "schwungfx",
+  "effect": true,
+  "release_version": "0.1.2",
+  "license": "MIT",
+  "about": "Juno-60 chorus emulation: the two BBD modes with mix and brightness.",
+  "build": {
+    "root": "../..",
+    "sources": [
+      ".build/upstream/schwung-junologue-chorus/src/dsp/junologue_chorus.c"
+    ],
+    "cflags": [
+      "-I.build/upstream/schwung-junologue-chorus/src",
+      "-I.build/upstream/schwung-junologue-chorus/src/dsp"
+    ],
+    "libs": [
+      "-lm"
+    ]
+  }
+}

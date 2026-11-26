@@ -1,0 +1,32 @@
+{
+  "name": "HUSH ONE",
+  "vendor": "Move Everything",
+  "uid": "HUSH",
+  "version": 280,
+  "so": "hush1.so",
+  "module": "module.json",
+  "adapter": "schwung",
+  "effect": false,
+  "release_version": "0.2.8",
+  "license": "MIT",
+  "about": "Monophonic subtractive bass synth emulating the Roland SH-101.",
+  "build": {
+    "root": "../..",
+    "sources": [
+      ".build/upstream/schwung-hush1/src/dsp/sh101_plugin.c",
+      ".build/upstream/schwung-hush1/src/dsp/sh101_control.c",
+      ".build/upstream/schwung-hush1/src/dsp/sh101_osc.c",
+      ".build/upstream/schwung-hush1/src/dsp/sh101_env.c",
+      ".build/upstream/schwung-hush1/src/dsp/sh101_filter.c",
+      ".build/upstream/schwung-hush1/src/dsp/sh101_lfo.c"
+    ],
+    "cflags": [
+      "-I.build/upstream/schwung-hush1/src",
+      "-I.build/upstream/schwung-hush1/src/dsp",
+      "-I.build/upstream/schwung-hush1/src/host"
+    ],
+    "libs": [
+      "-lm"
+    ]
+  }
+}

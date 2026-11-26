@@ -1,0 +1,26 @@
+{
+  "name": "TAPESCAM",
+  "vendor": "charlesvestal",
+  "uid": "TAPE",
+  "version": 550,
+  "so": "tapescam.so",
+  "module": "module.json",
+  "adapter": "schwungfx",
+  "effect": true,
+  "release_version": "0.5.5",
+  "license": "MIT",
+  "about": "Tape saturation and degradation: drive, tape speed, dropout noise and tone.",
+  "build": {
+    "root": "../..",
+    "sources": [
+      ".build/upstream/schwung-tapescam/src/dsp/tapescam.c"
+    ],
+    "cflags": [
+      "-I.build/upstream/schwung-tapescam/src",
+      "-I.build/upstream/schwung-tapescam/src/dsp"
+    ],
+    "libs": [
+      "-lm"
+    ]
+  }
+}

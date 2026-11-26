@@ -1,0 +1,33 @@
+{
+  "name": "4K EQ",
+  "vendor": "athousanddetails",
+  "uid": "4KEQ",
+  "version": 1030,
+  "so": "4k-eq.so",
+  "module": "module.json",
+  "adapter": "schwungfx",
+  "effect": true,
+  "release_version": "1.0.3",
+  "license": "GPL-3.0-only",
+  "about": "British console EQ: four calibrated bands, stepped high- and low-pass filters and console nonlinearity.",
+  "build": {
+    "root": "../..",
+    "sources": [
+      ".build/upstream/schwung-4keq/src/dsp/fourk_eq_plugin.cpp",
+      ".build/upstream/schwung-4keq/src/ported/shared-daf/dsp/FourKEQDSP.cpp"
+    ],
+    "cflags": [
+      "-I.build/upstream/schwung-4keq/src",
+      "-I.build/upstream/schwung-4keq/src/dsp",
+      "-I.build/upstream/schwung-4keq/src/ported/shared-daf/dsp",
+      "-I.build/upstream/schwung-4keq/src/host",
+      "-I.build/upstream/schwung-4keq/src/ported",
+      "-I.build/upstream/schwung-4keq/src/ported/daf-plugin",
+      "-I.build/upstream/schwung-4keq/src/ported/shared-daf",
+      "-std=gnu++17"
+    ],
+    "libs": [
+      "-lm"
+    ]
+  }
+}

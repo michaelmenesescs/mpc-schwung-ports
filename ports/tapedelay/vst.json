@@ -1,0 +1,27 @@
+{
+  "name": "TapeDelay",
+  "vendor": "cyrusasfa (port charlesvestal)",
+  "uid": "Tape",
+  "version": 2010,
+  "so": "tapedelay.so",
+  "module": "module.json",
+  "adapter": "schwungfx",
+  "effect": true,
+  "layout": "layout.conf",
+  "release_version": "2.0.1",
+  "license": "MIT",
+  "about": "Tape delay with flutter, tone shaping and stereo width.",
+  "build": {
+    "root": "../..",
+    "sources": [
+      ".build/upstream/schwung-space-delay/src/dsp/spacecho.c"
+    ],
+    "cflags": [
+      "-I.build/upstream/schwung-space-delay/src",
+      "-I.build/upstream/schwung-space-delay/src/dsp"
+    ],
+    "libs": [
+      "-lm"
+    ]
+  }
+}

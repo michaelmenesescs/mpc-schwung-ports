@@ -1,0 +1,31 @@
+{
+  "name": "Midiverb",
+  "vendor": "charlesvestal",
+  "uid": "Midi",
+  "version": 300,
+  "so": "midiverb.so",
+  "module": "module.json",
+  "adapter": "schwungfx",
+  "effect": true,
+  "release_version": "0.3.0",
+  "license": "GPL-3.0-only",
+  "about": "Alesis Midiverb / Midifex / Midiverb II emulator (23.4 kHz DASP interpreter). Needs your own ROM dumps.",
+  "build": {
+    "root": "../..",
+    "sources": [
+      ".build/upstream/schwung-midiverb/src/dsp/plugin.c",
+      ".build/upstream/schwung-midiverb/src/dsp/midiverb_core.c",
+      ".build/upstream/schwung-midiverb/src/dsp/resampler.c"
+    ],
+    "cflags": [
+      "-I.build/upstream/schwung-midiverb/src",
+      "-I.build/upstream/schwung-midiverb/src/dsp"
+    ],
+    "libs": [
+      "-lm"
+    ]
+  },
+  "user_data": [
+    "roms"
+  ]
+}

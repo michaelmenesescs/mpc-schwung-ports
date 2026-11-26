@@ -1,0 +1,14 @@
+unit
+program
+mix
+feedback
+input_gain
+output_gain
+predelay_ms
+low_cut_hz
+high_cut_hz
+width
+damping
+tilt
+lfo_rate
+lfo_depth

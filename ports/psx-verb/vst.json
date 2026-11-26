@@ -1,0 +1,26 @@
+{
+  "name": "PSX Verb",
+  "vendor": "charlesvestal",
+  "uid": "PSXV",
+  "version": 530,
+  "so": "psxverb.so",
+  "module": "module.json",
+  "adapter": "schwungfx",
+  "effect": true,
+  "release_version": "0.5.3",
+  "license": "MIT",
+  "about": "PlayStation 1 SPU reverb emulation.",
+  "build": {
+    "root": "../..",
+    "sources": [
+      ".build/upstream/schwung-psxverb/src/dsp/psxverb.c"
+    ],
+    "cflags": [
+      "-I.build/upstream/schwung-psxverb/src",
+      "-I.build/upstream/schwung-psxverb/src/dsp"
+    ],
+    "libs": [
+      "-lm"
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+[
+  {
+    "path": "roms",
+    "label": "Alesis ROMs (your own dumps)",
+    "description": "Midiverb reads the effects out of the units' own program EPROMs. Nothing is shipped: copy the dumps you made from your own hardware into this folder. Any subset works; a unit without its ROM passes audio through.",
+    "hint": "EPROM dumps of the exact sizes below. All three are optional - add the units you own.",
+    "rules": [
+      {
+        "label": "Midiverb I ROM",
+        "ext": [".rom", ".bin"],
+        "size": 16384,
+        "save_as": "midiverb.rom"
+      },
+      {
+        "label": "Midifex ROM",
+        "ext": [".rom", ".bin"],
+        "size": 16384,
+        "save_as": "midifex.rom"
+      },
+      {
+        "label": "Midiverb II ROM",
+        "ext": [".rom", ".bin"],
+        "size": 32768,
+        "save_as": "midiverb2.rom"
+      }
+    ]
+  }
+]
