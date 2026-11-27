@@ -6,7 +6,7 @@ glue (adapters, build scripts, port definitions, generated skins).
 
 | catalog id | module | upstream (commit) | licence |
 |---|---|---|---|
-| `schwung-4k-eq` | 4K EQ | [athousanddetails/schwung-4keq](https://github.com/athousanddetails/schwung-4keq) @ `3493c9496b1df1b6fe6a6c5f495bcc61bdbf71aa` | GPL-3.0-only |
+| `schwung-4k-eq` | 4K EQ | [athousanddetails/schwung-4keq](https://github.com/athousanddetails/schwung-4keq) @ `3493c9496b1df1b6fe6a6c5f495bcc61bdbf71aa` | GPL-3.0-or-later |
 | `schwung-bus-driver` | Bus Driver | [legsmechanical/schwung-busdriver](https://github.com/legsmechanical/schwung-busdriver) @ `36b6788de7eb15e11a5072680b6fbf06c020a947` | MIT |
 | `schwung-hush-one` | HUSH ONE | [charlesvestal/schwung-hush1](https://github.com/charlesvestal/schwung-hush1) @ `598ab90505f7f924d09ed83f47e46430218cd43b` | MIT |
 | `schwung-junologue-chorus` | Junologue Chorus | [charlesvestal/schwung-junologue-chorus](https://github.com/charlesvestal/schwung-junologue-chorus) @ `0b1ecd9d09daad91b5726899bd5e4cfe3f97cf06` | MIT |
@@ -14,6 +14,20 @@ glue (adapters, build scripts, port definitions, generated skins).
 | `schwung-psx-verb` | PSX Verb | [charlesvestal/schwung-psxverb](https://github.com/charlesvestal/schwung-psxverb) @ `c8cc0423807cd784888a47003a39417759fc98ac` | MIT |
 | `schwung-tapedelay` | TapeDelay | [charlesvestal/schwung-space-delay](https://github.com/charlesvestal/schwung-space-delay) @ `87e0cbf65cdb79933718e662552864d15080c714` | MIT |
 | `schwung-tapescam` | TAPESCAM | [charlesvestal/schwung-tapescam](https://github.com/charlesvestal/schwung-tapescam) @ `e9ab1ae20aa780da23a9a284d7e95402f51d17e4` | MIT |
+
+### 4K EQ: Dusk Audio
+
+The 4K EQ DSP is **not** athousanddetails' work: their `schwung-4keq` module vendors the engine
+unmodified from **[dusk-audio/dusk-audio-plugins](https://github.com/dusk-audio/dusk-audio-plugins)**
+under `src/ported/`, licensed **GPL-3.0-or-later**. Every band law, the Brown and Black calibration
+tables, the shared-stage pair corrections, the console nonlinearity and the fourteen factory programs
+are Dusk Audio's; `schwung-4keq` adds only the Move shell around them, and this port only the MPC glue.
+
+The upstream notices for that vendored code — the file-by-file table of what came from where — ship
+inside the release zip as `LICENSES/THIRD_PARTY.md`, and `licenses/4k-eq/` in this repository
+holds the same file. Because the engine is GPL-3.0-or-later, the catalog entry for 4K EQ is
+`GPL-3.0-or-later` as well, and its complete source is public: the module at the pinned commit above,
+the wrapper at the commit in `build.sh`, the adapter and port definition in this repository.
 
 Each upstream licence file, plus its own NOTICE / THIRD_PARTY notices where the module has them, is
 copied verbatim into `licenses/<id>/` and shipped inside the release zip as
